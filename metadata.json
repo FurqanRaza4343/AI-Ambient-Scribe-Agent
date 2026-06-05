@@ -1,0 +1,6 @@
+{
+  "name": "AI Ambient Scribe Agent",
+  "description": "An AI-powered multi-agent ambient scribe for medical encounters, processing transcripts, medical extractions, SOAP documentation, and safety checks in real-time.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

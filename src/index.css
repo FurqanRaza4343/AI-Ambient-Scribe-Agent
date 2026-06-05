@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Base custom interactive utilities */
+@layer utilities {
+  .glow-green {
+    box-shadow: 0 0 15px -3px rgba(16, 185, 129, 0.4);
+  }
+  .glow-blue {
+    box-shadow: 0 0 15px -3px rgba(59, 130, 246, 0.4);
+  }
+  .glow-red {
+    box-shadow: 0 0 15px -3px rgba(239, 68, 68, 0.4);
+  }
+}
+
+/* Animations for sound waves / ambient waves */
+@keyframes audioWave1 {
+  0%, 100% { height: 4px; }
+  50% { height: 28px; }
+}
+@keyframes audioWave2 {
+  0%, 100% { height: 8px; }
+  50% { height: 36px; }
+}
+@keyframes audioWave3 {
+  0%, 100% { height: 6px; }
+  50% { height: 20px; }
+}
+@keyframes audioWave4 {
+  0%, 100% { height: 10px; }
+  50% { height: 40px; }
+}
+
+.wave-bar-1 { animation: audioWave1 1.2s ease-in-out infinite; }
+.wave-bar-2 { animation: audioWave2 1.0s ease-in-out infinite; }
+.wave-bar-3 { animation: audioWave3 0.8s ease-in-out infinite; }
+.wave-bar-4 { animation: audioWave4 1.4s ease-in-out infinite; }
+
+/* Blinking record dot */
+@keyframes recordBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+.record-pulse {
+  animation: recordBlink 1.5s infinite;
+}
